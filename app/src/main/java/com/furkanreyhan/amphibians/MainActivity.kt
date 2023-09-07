@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         initViews()
         observeViewModel()
 
-        // Uzak servisi çağırın ve sonuçları ViewModel içindeki LiveData'ya yerleştirin
+        // Uzak servisi çağırın ve sonuçları ViewModel içindeki LiveData'ya yerleştirme
         viewModel.getAmphibians()
     }
 
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 
-    // ViewModel içindeki LiveData'yı observe edin ve sonuçları RecyclerView'e bağlayın
+    // ViewModel içindeki LiveData'yı observe edin ve sonuçları RecyclerView'e bağlama
     @SuppressLint("NotifyDataSetChanged")
     private fun observeViewModel(){
         viewModel.amphibiansList.observe(this, Observer { amphibiansList ->
